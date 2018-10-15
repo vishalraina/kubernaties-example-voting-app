@@ -4,9 +4,8 @@ metadata:
   name: worker-app-pod
   labels:
     name: worker-app-pod
-    app: demp-voting-app
-
+    app: demo-voting-app
 spec:
   containers:
-    - name: voting-app
-      image:  dockersamples/examplevotingapp_worker
+  - name: worker-app
+    image: dockersamples/examplevotingapp_worker
