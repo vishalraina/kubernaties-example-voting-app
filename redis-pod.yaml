@@ -4,11 +4,10 @@ metadata:
   name: redis-pod
   labels:
     name: redis-pod
-    app: demp-voting-app
-
+    app: demo-voting-app
 spec:
   containers:
-    - name: redis
-      image:  redis
-      ports:
-        - containerPort: 6379
+  - name: redis
+    image: redis:latest
+    ports:
+     - containerPort: 6379
