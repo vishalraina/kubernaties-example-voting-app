@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-service
+  labels:
+    name: jenkins-service
+    app: jenkins-app
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+  selector:
+    name: jenkins-app-pod
+    app: jenkins-app
